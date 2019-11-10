@@ -1,9 +1,7 @@
-package com.mmt.testcases;
+package com.spicejet.testcases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
@@ -11,11 +9,11 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.mmt.base.TestBase;
-import com.mmt.pages.HomePage;
-import com.mmt.pages.LaunchPage;
-import com.mmt.pages.SearchResultPage;
-import com.mmt.utils.ReadData;
+import com.spicejet.base.TestBase;
+import com.spicejet.pages.HomePage;
+import com.spicejet.pages.LaunchPage;
+import com.spicejet.pages.SearchResultPage;
+import com.spicejet.utils.ReadData;
 
 public class SearchPageTest extends TestBase {
 	

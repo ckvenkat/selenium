@@ -1,4 +1,4 @@
-package com.mmt.base;
+package com.spicejet.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,7 +36,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\mmt\\config\\config.properties");
+					System.getProperty("user.dir") + "\\src\\main\\java\\com\\spicejet\\config\\config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -59,13 +59,13 @@ public class TestBase {
 		String browserName = prop.getProperty("browserName");
 		test.log(Status.INFO, "Opening browser "+browserName );
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\com\\mmt\\resources\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\com\\spicejet\\resources\\chromedriver.exe");
 			driver = new ChromeDriver();			
 		}else if(browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "src\\main\\java\\com\\mmt\\config\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "src\\main\\java\\com\\spicejet\\config\\geckodriver.exe");
 			driver = new FirefoxDriver();			
 		}else if(browserName.equals("IE")) {
-			System.setProperty("webdriver.IE.driver", System.getProperty("user.dir") + "src\\main\\java\\com\\mmt\\config\\IEDriverServer.exe");
+			System.setProperty("webdriver.IE.driver", System.getProperty("user.dir") + "src\\main\\java\\com\\spicejet\\config\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();			
 		}
 		

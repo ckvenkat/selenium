@@ -1,13 +1,14 @@
-package com.mmt.pages;
+package com.spicejet.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.mmt.base.TestBase;
+import com.spicejet.base.TestBase;
 
 public class SearchResultPage extends TestBase {
 
@@ -16,7 +17,7 @@ public class SearchResultPage extends TestBase {
 	
 	public void verifySearchResultPage(ExtentTest test) throws IOException, InterruptedException {
 		wait.until(ExpectedConditions.visibilityOf(searchResultPageText));
-		String expectedString = searchResultPageText.getText();
+		String expectedString = driver.findElement(By.xpath("//span[@class=\"button-continue-text\"]")).getText();
 		if(expectedString.equalsIgnoreCase("continue")) {
 			assertSuccess("Search Result Successfull",test);
 		}else {

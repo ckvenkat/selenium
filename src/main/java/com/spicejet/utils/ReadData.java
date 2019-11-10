@@ -1,4 +1,4 @@
-package com.mmt.utils;
+package com.spicejet.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class ReadData {
 	
 	public static Object[][] readVariant() throws IOException{
 		
-		String path = System.getProperty("user.dir")+"\\src\\main\\java\\com\\mmt\\resources\\SpiceJet_PassengerTravelDetails.xlsx";
+		String path = System.getProperty("user.dir")+"\\src\\main\\java\\com\\spicejet\\resources\\SpiceJet_PassengerTravelDetails.xlsx";
 		DataFormatter formatter= new DataFormatter();
 	    FileInputStream fileInputStream= new FileInputStream(path); //Excel sheet file location get mentioned here
 	    XSSFWorkbook workbook = new XSSFWorkbook (fileInputStream); //get my workbook 

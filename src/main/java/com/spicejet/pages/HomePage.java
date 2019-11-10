@@ -1,10 +1,8 @@
-package com.mmt.pages;
+package com.spicejet.pages;
 
-import com.relevantcodes.extentreports.LogStatus;
-import com.mmt.pages.SearchResultPage;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.mmt.base.TestBase;
+import com.spicejet.base.TestBase;
 
 import java.io.IOException;
 import java.util.List;
